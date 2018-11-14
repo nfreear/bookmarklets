@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "ndf-bookmarklets",
+  "version": "1.0.0",
+  "description": "A collection of bookmarklet Javascripts | 30-October-2018.",
+  "license": "",
+  "author": "Nick Freear",
+  "contributors": [],
+  "repository": "https://github.com/nfreear/ndf-bookmarklets.git",
+  "engines": { "node": ">= 9.11" },
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "semistandard": "^13.0.1"
+  },
+  "scripts": {
+    "fix": "semistandard --fix",
+    "start": "live-server --port=9001",
+    "test": "semistandard"
+  },
+  "x-gist-url": "https://gist.github.com/nfreear/e295be4edf0c656b3c28018ea997f637",
+  "x-bookmarklets": {
+    "TeamDesk delete": "javascript:(function(){var D=document,s=D.createElement('script');s.src='http://127.0.0.1:9001/lib/teamdesk.js?r='+(Math.random());D.body.appendChild(s)})();"
+  },
+  "keywords": [ "bookmarklet", "teamwork" ]
+}
