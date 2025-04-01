@@ -21,7 +21,7 @@
   },
   "semistandard": {
     "ignore": [
-      "X_youtrackRecheckList.PS.js"
+      "youtrackRecheckList.PS.js"
     ]
   },
   "x-gist-url": "https://gist.github.com/nfreear/e295be4edf0c656b3c28018ea997f637",
