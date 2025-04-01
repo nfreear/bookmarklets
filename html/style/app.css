@@ -1,7 +1,7 @@
 
 my-bookmarklet::part(a) {
   background: #def;
-  border: 2px dotted #bbb;
+  border: 3px dotted #bbb;
   border-radius: .2rem;
   cursor: copy;
   display: block;
@@ -27,6 +27,6 @@ my-bookmarklet::part(a):hover {
 body {
   font-family: sans-serif;
   margin: auto;
-  max-width: 30rem;
-  padding: 0 .5rem;
+  max-width: 34rem;
+  padding: 0 1rem;
 }
