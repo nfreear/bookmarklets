@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <link rel="stylesheet" href="style/app.css">
+
+  <title>YouTrack Recheck List</title>
+
+  <h1>YouTrack Recheck List</h1>
+
+  <h2>Version 2 - work-in-progress!</h2>
+
+  <p>A bookmarklet to get a list of issues from <q>YouTrack</q>, with custom fields, and output in CSV format. </p>
+
+  <p>It scrapes data from a list of issues on the page. Currently, output appears in the Javascript console.</p>
+
+  <p> Feedback and suggestions welcome!</p>
+
+  <p><my-bookmarklet name="YouTrack (N)"></my-bookmarklet></p>
+
+  <my-dev-warning></my-dev-warning>
+
+
+<script type="importmap">
+{
+  "imports": {
+    "ndf-bookmarklets": "../index.js",
+    "my-bookmarklet-etc": "https://nfreear.github.io/elements/i.js"
+  },
+  "myElements": {
+    "use": [ "my-bookmarklet", "my-dev-warning" ]
+  }
+}
+</script>
+
+<script type="module">
+  import 'my-bookmarklet-etc';
+  import { youtrackRecheckList } from 'ndf-bookmarklets';
+
+  const bookmarkletLinkElem = document.querySelector('my-bookmarklet');
+
+  bookmarkletLinkElem.fromFunction(youtrackRecheckList);
+</script>
+
+</html>

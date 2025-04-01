@@ -1,0 +1,32 @@
+
+my-bookmarklet::part(a) {
+  background: #def;
+  border: 2px dotted #bbb;
+  border-radius: .2rem;
+  cursor: copy;
+  display: block;
+  font-size: larger;
+  letter-spacing: .03rem;
+  margin: 2rem 0;
+  padding: .5rem;
+  outline-offset: .3rem;
+  text-align: center;
+}
+
+my-bookmarklet::part(a):focus,
+my-bookmarklet::part(a):hover {
+  background: #fff;
+  border-color: black;
+  transition: all 1s;
+}
+
+* {
+  outline-offset: .2rem;
+}
+
+body {
+  font-family: sans-serif;
+  margin: auto;
+  max-width: 30rem;
+  padding: 0 .5rem;
+}
