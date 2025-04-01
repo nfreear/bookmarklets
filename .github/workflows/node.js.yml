@@ -1,0 +1,56 @@
+name: Deploy to GH Pages
+
+on: [push, pull_request]
+# See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+env:
+  NODE_VERSION: 22
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+# Allow one concurrent deployment
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+    - name: Set up Node.js ${{ env.NODE_VERSION }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        check-latest: true
+        # cache: 'npm'
+    - run: npm ci
+    - run: npm run lint
+    - run: npm run build --if-present
+    # https://github.com/actions/jekyll-build-pages
+    - name: run Jekyll
+      uses: actions/jekyll-build-pages@v1
+      with:
+        destination: "./_site"
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: "./_site"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+# End.

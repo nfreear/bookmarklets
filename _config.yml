@@ -1,0 +1,21 @@
+#
+# Use Jekyll to exclude files from GitHub Pages.
+#
+exclude:
+- Gemfile
+- Gemfile.lock
+- node_modules
+- vendor/bundle/
+- vendor/cache/
+- vendor/gems/
+- vendor/ruby/
+- .gitignore
+- .github
+- .nojekyll
+- package-lock.json
+- package.json
+- webpack.config.js
+- CHANGELOG.md
+- README.md
+
+# End.
