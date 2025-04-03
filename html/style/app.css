@@ -1,7 +1,7 @@
 
 my-bookmarklet::part(a) {
   background: #def;
-  border: 3px dotted #bbb;
+  border: 3px dotted #999;
   border-radius: .2rem;
   cursor: copy;
   display: block;

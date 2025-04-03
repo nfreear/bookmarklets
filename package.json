@@ -5,11 +5,7 @@
   "description": "A collection of bookmarklet Javascripts | 30-October-2018.",
   "license": "",
   "author": "Nick Freear",
-  "contributors": [],
   "repository": "https://github.com/nfreear/ndf-bookmarklets.git",
-  "engines": {
-    "node": ">= 9.11"
-  },
   "devDependencies": {
     "live-server": "^1.2.0",
     "semistandard": "^17.0.0"
@@ -30,6 +26,7 @@
   },
   "keywords": [
     "bookmarklet",
-    "teamwork"
+    "teamwork",
+    "youtrack"
   ]
 }
