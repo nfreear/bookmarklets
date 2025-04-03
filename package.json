@@ -2,8 +2,8 @@
   "private": true,
   "name": "ndf-bookmarklets",
   "version": "1.0.0",
-  "description": "A collection of bookmarklet Javascripts | 30-October-2018.",
-  "license": "",
+  "description": "A collection of useful bookmarklet Javascripts | 30-October-2018.",
+  "license": "MIT",
   "author": "Nick Freear",
   "repository": "https://github.com/nfreear/ndf-bookmarklets.git",
   "devDependencies": {
