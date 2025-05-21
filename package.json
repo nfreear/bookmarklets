@@ -12,7 +12,8 @@
   },
   "scripts": {
     "lint": "semistandard --fix",
-    "start": "live-server --port=9001",
+    "start": "node script/httpServer.js",
+    "start:x": "live-server --port=9001",
     "test": "npm run lint"
   },
   "semistandard": {

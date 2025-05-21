@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <meta name="robots" content="noindex">
+
+  <link rel="stylesheet" href="style/app.css">
+
+  <title>Character key shortcuts</title>
+
+  <h1>Character key shortcuts</h1>
+
+  <p>A bookmarklet to ... </p>
+
+  <p> Feedback and suggestions welcome!</p>
+
+  <p><my-bookmarklet name="Trigger char key shortcuts"></my-bookmarklet></p>
+
+  <my-dev-warning></my-dev-warning>
+
+
+<script type="importmap">
+{
+  "imports": {
+    "charKeyBookmarklet": "../lib/characterKeyShortcuts.esm.marklet.js",
+    "ndf-bookmarklets": "../index.js",
+    "my-elements": "https://nfreear.github.io/elements/i.js"
+  },
+  "myElements": {
+    "use": [ "my-bookmarklet", "my-dev-warning" ]
+  }
+}
+</script>
+
+<script type="module">
+  import 'my-elements';
+  import { characterKeyShortcutsBookmarklet } from 'charKeyBookmarklet';
+
+  const bookmarkletLinkElem = document.querySelector('my-bookmarklet');
+
+  bookmarkletLinkElem.fromFunction(characterKeyShortcutsBookmarklet);
+</script>
+
+</html>
