@@ -21,6 +21,7 @@
 {
   "imports": {
     "charKeyBookmarklet": "../lib/characterKeyShortcuts.esm.marklet.js",
+    "charCodeGenerator": "../lib/util/charCodeGenerator.js",
     "ndf-bookmarklets": "../index.js",
     "my-elements": "https://nfreear.github.io/elements/i.js"
   },
@@ -33,10 +34,13 @@
 <script type="module">
   import 'my-elements';
   import { characterKeyShortcutsBookmarklet } from 'charKeyBookmarklet';
+  import charCodeGenerator from 'charCodeGenerator';
 
   const bookmarkletLinkElem = document.querySelector('my-bookmarklet');
 
   bookmarkletLinkElem.fromFunction(characterKeyShortcutsBookmarklet);
+
+  console.debug('Generator:', charCodeGenerator.prototype);
 </script>
 
 </html>
