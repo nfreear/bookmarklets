@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <meta name="robots" content="noindex">
+
+  <link rel="stylesheet" href="style/app.css">
+
+  <title>Find Shadow DOMs</title>
+
+  <h1>Find Shadow DOMs</h1>
+
+  <p>A bookmarklet to find occurences of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Shadow DOM</a> on the page.</p>
+
+  <p>It traverses the DOM recursively. Currently, output appears in the Javascript console.</p>
+
+  <p> Feedback and suggestions welcome!</p>
+
+  <p><my-bookmarklet name="Shadow DOM"></my-bookmarklet></p>
+
+  <my-dev-warning></my-dev-warning>
+
+
+<script type="importmap">
+{
+  "imports": {
+    "ndf-bookmarklets": "../index.js",
+    "my-bookmarklet-etc": "https://nfreear.github.io/elements/i.js"
+  },
+  "myElements": {
+    "use": [ "my-bookmarklet", "my-dev-warning" ]
+  }
+}
+</script>
+
+<script type="module">
+  import 'my-bookmarklet-etc';
+  import { findShadowDomsBookmarklet } from 'ndf-bookmarklets';
+
+  const bookmarkletLinkElem = document.querySelector('my-bookmarklet');
+
+  bookmarkletLinkElem.fromFunction(findShadowDomsBookmarklet);
+</script>
+
+</html>

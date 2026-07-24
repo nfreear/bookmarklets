@@ -5,5 +5,8 @@ export { youtrackRecheckList } from './lib/youtrackRecheckList.js';
 export { youtrackRecheckListBookmarkletLegacy } from './lib/youtrackRecheckList.legacy.js';
 export { youtrackRecheckListBookmarkletPSpeller } from './lib/youtrackRecheckList.PS.js';
 export { makeAsyncCharCodeIterator } from './lib/util/charCodeIterator.js';
+export { charCodeGenerator } from './lib/util/charCodeGenerator.js';
 export { characterKeyShortcutsBookmarklet } from './lib/characterKeyShortcuts.esm.marklet.js';
 export { characterKeyShortcuts, fireKBEvent } from './lib/characterKeyShortcuts.esm.js';
+
+export { findShadowDomsBookmarklet } from './lib/findShadowDom.marklet.js';
