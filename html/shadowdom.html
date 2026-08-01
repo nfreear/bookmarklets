@@ -6,6 +6,7 @@
 
   <title>Find Shadow DOMs</title>
 
+<main>
   <h1>Find Shadow DOMs</h1>
 
   <p>A bookmarklet to find occurences of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Shadow DOM</a> on the page.</p>
@@ -14,9 +15,23 @@
 
   <p> Feedback and suggestions welcome!</p>
 
-  <p><my-bookmarklet name="Shadow DOM"></my-bookmarklet></p>
+  <p><my-bookmarklet id="shadowDom">Shadow DOM</my-bookmarklet></p>
+
+
+  <h2>Find custom elements</h2>
+
+  <p>A bookmarklet to find occurences of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements">Custom elements</a> on the page.</p>
+
+  <p><my-bookmarklet id="customEl">Custom elements</my-bookmarklet>
+
+</main>
+<footer>
+
+  <p>Source: <a href="https://github.com/nfreear/bookmarklets">nfreear/bookmarklets</a></p>
 
   <my-dev-warning></my-dev-warning>
+
+</footer>
 
 
 <script type="importmap">
@@ -33,11 +48,15 @@
 
 <script type="module">
   import 'my-bookmarklet-etc';
-  import { findShadowDomsBookmarklet } from 'ndf-bookmarklets';
+  import { findShadowDomsBookmarklet, findCustomElementsBookmarklet } from 'ndf-bookmarklets';
 
   const bookmarkletLinkElem = document.querySelector('my-bookmarklet');
 
   bookmarkletLinkElem.fromFunction(findShadowDomsBookmarklet);
+
+  const bookmarkletLinkElemB = document.querySelector('#customEl');
+
+  bookmarkletLinkElemB.fromFunction(findCustomElementsBookmarklet);
 </script>
 
 </html>

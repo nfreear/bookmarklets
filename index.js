@@ -9,4 +9,4 @@ export { charCodeGenerator } from './lib/util/charCodeGenerator.js';
 export { characterKeyShortcutsBookmarklet } from './lib/characterKeyShortcuts.esm.marklet.js';
 export { characterKeyShortcuts, fireKBEvent } from './lib/characterKeyShortcuts.esm.js';
 
-export { findShadowDomsBookmarklet } from './lib/findShadowDom.marklet.js';
+export { findShadowDomsBookmarklet, findCustomElementsBookmarklet } from './lib/findShadowDom.marklet.js';
