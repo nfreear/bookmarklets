@@ -3,7 +3,7 @@ name: Deploy to GH Pages
 on: [push, pull_request]
 # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 env:
-  NODE_VERSION: 22
+  NODE_VERSION: 24
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:

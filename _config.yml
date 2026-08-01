@@ -16,6 +16,7 @@ exclude:
 - package.json
 - webpack.config.js
 - CHANGELOG.md
+- LICENSE.txt
 - README.md
 
 # End.
