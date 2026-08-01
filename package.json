@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "ndf-bookmarklets",
+  "type": "module",
   "exports": {
     ".": "./index.js"
   },

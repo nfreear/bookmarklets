@@ -2,11 +2,11 @@
  * HTTP server, with middleware to set CORS header.
  */
 
-const liveServer = require('live-server');
-const PATH = require('path');
+import liveServer from 'live-server';
+import { resolve } from 'node:path';
 
 const port = 8080; // Was: 9001.
-const root = PATH.resolve(__dirname, '..');
+const root = import.meta.resolve('..');
 
 const PARAMS = {
   port, // Set the server port. Defaults to 8080.

@@ -1,3 +1,8 @@
+/**
+ * Bookmarklet and utility exports.
+ * @see https://github.com/nfreear/bookmarklets
+ * @license MIT
+ */
 export { YoutrackHtmlListParser } from './lib/YoutrackHtmlListParser.js';
 export { youtrackRecheckListBookmarklet } from './lib/youtrackRecheckList.marklet.js';
 export { youtrackRecheckList } from './lib/youtrackRecheckList.js';
@@ -7,5 +12,4 @@ export { makeAsyncCharCodeIterator } from './lib/util/charCodeIterator.js';
 export { charCodeGenerator } from './lib/util/charCodeGenerator.js';
 export { characterKeyShortcutsBookmarklet } from './lib/characterKeyShortcuts.esm.marklet.js';
 export { characterKeyShortcuts, fireKBEvent } from './lib/characterKeyShortcuts.esm.js';
-
 export { findShadowDomsBookmarklet, findCustomElementsBookmarklet } from './lib/findShadowDom.marklet.js';
