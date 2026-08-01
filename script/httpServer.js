@@ -1,9 +1,9 @@
 /**
  * HTTP server, with middleware to set CORS header.
+ *
+ * @license MIT
  */
-
 import liveServer from 'live-server';
-import { resolve } from 'node:path';
 
 const port = 8080; // Was: 9001.
 const root = import.meta.resolve('..');
