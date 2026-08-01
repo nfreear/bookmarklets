@@ -10,11 +10,13 @@
   "author": "Nick Freear",
   "repository": "https://github.com/nfreear/bookmarklets.git",
   "devDependencies": {
+    "eslint": "^9.39.5",
     "live-server": "^1.2.0",
-    "semistandard": "^17.0.0"
+    "neostandard": "^0.13.0"
   },
   "scripts": {
-    "lint": "semistandard --fix",
+    "lint": "npx eslint",
+    "lint:x": "semistandard --fix",
     "start": "node script/httpServer.js",
     "start:x": "live-server --port=9001",
     "test": "npm run lint"

@@ -1,4 +1,3 @@
-
 export { YoutrackHtmlListParser } from './lib/YoutrackHtmlListParser.js';
 export { youtrackRecheckListBookmarklet } from './lib/youtrackRecheckList.marklet.js';
 export { youtrackRecheckList } from './lib/youtrackRecheckList.js';
