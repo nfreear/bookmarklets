@@ -15,7 +15,7 @@
 
   <p> Feedback and suggestions welcome!</p>
 
-  <p><my-bookmarklet id="shadowDom">Shadow DOM</my-bookmarklet></p>
+  <p><my-bookmarklet id="shadowDom" name="Shadow DOM">Loading Shadow DOM bookmarklet…</my-bookmarklet></p>
 
 
   <h2>Find custom elements</h2>
@@ -37,26 +37,25 @@
 <script type="importmap">
 {
   "imports": {
-    "ndf-bookmarklets": "../index.js",
-    "my-bookmarklet-etc": "https://nfreear.github.io/elements/i.js"
+    "app": "./app.js",
+    "index": "../index.js",
+    "ndf-elements": "https://nfreear.github.io/elements/i.js"
   },
   "myElements": {
-    "use": [ "my-bookmarklet", "my-dev-warning" ]
+    "use": [ "my-dev-warning" ]
   }
 }
 </script>
 
+
 <script type="module">
-  import 'my-bookmarklet-etc';
-  import { findShadowDomsBookmarklet, findCustomElementsBookmarklet } from 'ndf-bookmarklets';
+  import { findShadowDomsBookmarklet, findCustomElementsBookmarklet, createBookmarklet } from 'app';
 
-  const bookmarkletLinkElem = document.querySelector('my-bookmarklet');
+  createBookmarklet(findShadowDomsBookmarklet, '#shadowDom');
+  createBookmarklet(findCustomElementsBookmarklet, '#customEl');
 
-  bookmarkletLinkElem.fromFunction(findShadowDomsBookmarklet);
-
-  const bookmarkletLinkElemB = document.querySelector('#customEl');
-
-  bookmarkletLinkElemB.fromFunction(findCustomElementsBookmarklet);
+  // const bookmarkletLinkElemB = document.querySelector('#customEl');
+  // bookmarkletLinkElemB.fromFunction(findCustomElementsBookmarklet);
 </script>
 
 </html>
