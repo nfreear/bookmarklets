@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+  <meta charset="utf-8">
   <meta name="robots" content="noindex">
 
   <link rel="stylesheet" href="style/app.css">
@@ -22,7 +23,7 @@
 
   <p>A bookmarklet to find occurences of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements">Custom elements</a> on the page.</p>
 
-  <p><my-bookmarklet id="customEl">Custom elements</my-bookmarklet>
+  <p><my-bookmarklet id="customEl" name="Custom elements">Loading Custom elements bookmarklet…</my-bookmarklet>
 
 </main>
 <footer>
@@ -53,9 +54,6 @@
 
   createBookmarklet(findShadowDomsBookmarklet, '#shadowDom');
   createBookmarklet(findCustomElementsBookmarklet, '#customEl');
-
-  // const bookmarkletLinkElemB = document.querySelector('#customEl');
-  // bookmarkletLinkElemB.fromFunction(findCustomElementsBookmarklet);
 </script>
 
 </html>
