@@ -1,4 +1,6 @@
 import 'ndf-elements';
+import 'interestfor-polyfill'; // Doesn't work on shadow DOM :(.
+// import 'invokers/interest';
 import MyBookmarkletElement from '../lib/elements/MyBookmarkletElement.js';
 export * from '../index.js';
 
